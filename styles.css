@@ -1,0 +1,80 @@
+body{
+    margin: 0;
+}
+main{
+    font-family: 'Kaushan Script', cursive;
+    display: flex;
+    text-align: center;
+    flex-direction: column;
+    background-image: linear-gradient(to top, #fbc2eb 0%, #a6c1ee 100%);
+    height: 100%;
+}
+
+h1{
+    font-size: 64px;
+    /* Gradient background */
+  background: linear-gradient(
+   90deg,
+    #001F3F,  /* Navy - 12.5:1 on pink */
+    gray
+    ,  /* White - 1.6:1 but blends in gradient */
+     rgb(179, 160, 54),  /* Gold - 4.8:1 on pink (AA large text) */
+    #001F3F
+  );
+  background-size: 300% 300%;
+
+  /* Clip bg to text */
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+
+  /* Animation */
+  animation: titleGradient 8s linear infinite;
+}
+
+/* Move the gradient over time */
+@keyframes titleGradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+
+p{
+    margin: auto;
+    padding: 20px;
+    font-size: 32px;
+    text-shadow: 2px 2px white;
+}
+
+button{
+    margin: auto;
+    height: 100px;
+    width: 100px;
+    font-family: 'Kaushan Script';
+    border-radius: 50%;
+    background-color: red;
+    color: white;
+    box-shadow: 2px 2px grey;
+}
+button:hover {
+  background-color: none; /* Deeper pink */
+  color: #FFFFFF; /* White text on hover */
+  transform: scale(1); /* Subtle grow */
+  box-shadow: 0 4px 12px rgba(255, 215, 0, 0.6); /* Pink glow */
+}
+.fun {
+    background-image: linear-gradient(to right, #fa709a 0%, #fee140 100%);
+}
+.happy{
+  font-size: 40px !important;  /* Bigger text */
+  color: purple!important;   /* Gold */
+  text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+  animation: bounce 0.6s ease;
+}
